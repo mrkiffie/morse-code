@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Morse Code Trainer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="noselect">
+    <h1>Morse Code Trainer</h1>
+    <div id="code">&nbsp;</div>
+    <div id="buttons">
+        <button value=".-">A</button>
+        <button value="-...">B</button>
+        <button value="-.-.">C</button>
+        <button value="-..">D</button>
+        <button value=".">E</button>
+        <button value="..-.">F</button>
+        <button value="--.">G</button>
+        <button value="....">H</button>
+        <button value="..">I</button>
+        <button value=".---">J</button>
+        <button value="-.-">K</button>
+        <button value=".-..">L</button>
+        <button value="--">M</button>
+        <button value="-.">N</button>
+        <button value="---">O</button>
+        <button value=".--.">P</button>
+        <button value="--.-">Q</button>
+        <button value=".-.">R</button>
+        <button value="...">S</button>
+        <button value="-">T</button>
+        <button value="..-">U</button>
+        <button value="...-">V</button>
+        <button value=".--">W</button>
+        <button value="--.-">X</button>
+        <button value="-.--">Y</button>
+        <button value="--..">Z</button>
+        <button value="-----">0</button>
+        <button value=".----">1</button>
+        <button value="..---">2</button>
+        <button value="...--">3</button>
+        <button value="....-">4</button>
+        <button value=".....">5</button>
+        <button value="-....">6</button>
+        <button value="--...">7</button>
+        <button value="---..">8</button>
+        <button value="----.">9</button>
+    </div>
+    <p>Tap a button generate the morse code for the corresponding letter/number.</p>
+
+    <form action="" id="settings">
+        <label for="vibrate"><input type="checkbox" name="vibrate" id="vibrate" checked><span>Vibrate</span></label>
+        <label for="displayCode"><input type="checkbox" name="displayCode" id="displayCode" checked><span>Display dots and dashes</span></label>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
