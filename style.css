@@ -12,6 +12,7 @@ body {
     text-align: center;
     max-width: 30em;
     margin: 0 auto;
+    overflow: hidden;
 }
 h1 {
     margin: .5em 0;
@@ -34,26 +35,26 @@ button {
     background: none;
 }
 .noselect {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .ripple-effect{
-  position: absolute;
-  border-radius: 50%;
-  animation: ripple-animation 1s;
-  opacity: 0;
+    position: absolute;
+    border-radius: 50%;
+    animation: ripple-animation 1s;
+    opacity: 0;
 }
 
 @keyframes ripple-animation {
     from {
-      transform: scale(1);
-      opacity: 0.4;
+        transform: scale(1);
+        opacity: 0.4;
     }
     to {
-      transform: scale(5);
-      opacity: 0;
+        transform: scale(5);
+        opacity: 0;
     }
 }
