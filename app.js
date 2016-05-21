@@ -1,9 +1,48 @@
+'use strict';
+
 const unit = {
   dot: 100,
   dash: 300,
   space: 30,
   letterSpace: 200
 };
+
+const colors = [
+  '#2196f3',
+  '#4caf50',
+  '#ffeb3b',
+  '#ff9800',
+  '#9c27b0'
+];
+
+/**
+ * Creates a ripple effect on the element to which it is attached
+ * @param {Event} event A DOM event
+ */
+function rippleEffect(event) {
+  event.preventDefault();
+
+  var target = event.currentTarget;
+  var rect = target.getBoundingClientRect();
+  var xCenter = event.clientX - rect.left;
+  var yCenter = event.clientY - rect.top;
+  var radius = Math.min(rect.width, rect.height) / 2;
+
+  var ripple = document.createElement('div');
+  ripple.className = 'ripple-effect';
+
+  ripple.style.width = radius * 2 + 'px';
+  ripple.style.height = radius * 2 + 'px';
+  ripple.style.top = yCenter - radius + 'px';
+  ripple.style.left = xCenter - radius + 'px';
+  ripple.style.pointerEvents = 'none';
+  ripple.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+  target.appendChild(ripple);
+
+  window.setTimeout(() => {
+    ripple.parentNode.removeChild(ripple);
+  }, 1000);
+}
 
 class MorseCodePulse {
   /**
@@ -84,6 +123,7 @@ class MorseCodeApp {
     const buttons = Array.from(this.targetElement.querySelectorAll('button'));
     buttons.forEach(el => {
       el.addEventListener('click', this.eventHandler.bind(this));
+      el.addEventListener('click', rippleEffect);
     });
   }
 

@@ -28,10 +28,32 @@ button {
     display: inline-block;
     width: 3em;
     text-align: center;
+    position: relative;
+    border: 0;
+    outline: 0;
+    background: none;
 }
 .noselect {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.ripple-effect{
+  position: absolute;
+  border-radius: 50%;
+  animation: ripple-animation 1s;
+  opacity: 0;
+}
+
+@keyframes ripple-animation {
+    from {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    to {
+      transform: scale(5);
+      opacity: 0;
+    }
 }
