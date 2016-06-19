@@ -1,5 +1,11 @@
 'use strict';
 
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register('./sw.js', {
+    scope: './'
+  });
+}
+
 var unit = {
   dot: 150,
   dash: 450,
@@ -32,7 +38,7 @@ function rippleEffect(event) {
   var rect = target.getBoundingClientRect();
   var xCenter = event.clientX - rect.left;
   var yCenter = event.clientY - rect.top;
-  var radius = Math.min(rect.width, rect.height) / 2;
+  var radius = Math.min(rect.width, rect.height) / 4;
   var ripple = document.createElement('div');
   ripple.className = 'ripple-effect';
   ripple.style.width = radius * 2 + 'px';

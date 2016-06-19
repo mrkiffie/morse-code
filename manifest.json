@@ -1,0 +1,21 @@
+{
+  "lang": "en",
+  "short_name": "Morse Code",
+  "name": "Morse Code Trainer",
+  "description": "A Morse Code Trainer using the Vibration API",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff",
+  "orientation": "portrait",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "images/morse-code.png",
+      "sizes": "288x288",
+      "type": "image/png"
+    },
+    {
+      "src": "images/morse-code.svg"
+    }
+  ]
+}
